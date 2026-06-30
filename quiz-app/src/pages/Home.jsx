@@ -1,50 +1,55 @@
 import React from 'react';
-import { Carousel, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Carousel, Container, Row, Col, Image } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <Container>
-      <h2 className="mb-4">Home</h2>
-      <p>Welcome to the Online Quiz Application. Test your knowledge here!</p>
+    <Container fluid>
       <Carousel>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src="/images/slide1.jpg"
             alt="First slide"
-            style={{ objectFit: 'cover', height: '400px' }}
           />
-          <Carousel.Caption>
-            <h3>Great Quizzes</h3>
-            <p>Engage in our wide variety of topics.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src="/images/slide2.jpg"
             alt="Second slide"
-            style={{ objectFit: 'cover', height: '400px' }}
           />
-          <Carousel.Caption>
-            <h3>Stay Updated</h3>
-            <p>Check out our <Link to="/news" className="text-white text-decoration-underline">News section</Link> for the latest updates.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
             src="/images/slide3.jpg"
             alt="Third slide"
-            style={{ objectFit: 'cover', height: '400px' }}
           />
-          <Carousel.Caption>
-            <h3>Join the Community</h3>
-            <p>Participate and learn together.</p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      
+      <Row className="mt-4 justify-content-center">
+        <Col xs="auto">
+          <Image src="/images/menu-01.jpg" roundedCircle style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+        </Col>
+        <Col xs="auto">
+          <Image src="/images/menu-02.jpg" roundedCircle style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+        </Col>
+        <Col xs="auto">
+          <Image src="/images/menu-03.jpg" roundedCircle style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+        </Col>
+        <Col xs="auto">
+          <Image src="/images/menu-04.jpg" roundedCircle style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+        </Col>
+        <Col xs="auto">
+          <Image src="/images/menu-05.jpg" roundedCircle style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+        </Col>
+        <Col xs="auto">
+          <Image src="/images/menu-06.jpg" roundedCircle style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+        </Col>
+      </Row>
+
+      <h4 className="text-danger mt-3">This is Home Page</h4>
     </Container>
   );
 };

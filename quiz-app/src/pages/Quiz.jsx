@@ -28,7 +28,7 @@ const Quiz = () => {
 
   return (
     <Container>
-      <h2 className="mb-4">Quiz Page</h2>
+      <h2 className="mb-4 text-center">Quiz Page</h2>
       {quizQuestions.map(q => (
         <QuizItem 
           key={q.id} 
@@ -37,9 +37,12 @@ const Quiz = () => {
           onOptionChange={handleOptionChange} 
         />
       ))}
-      <Button variant="primary" onClick={handleSubmit} disabled={submitted}>
-        Submit Answers
-      </Button>
+      
+      <div className="text-center mt-3">
+        <Button variant="primary" onClick={handleSubmit} disabled={submitted}>
+          Submit Answers
+        </Button>
+      </div>
       
       {submitted && (
         <Alert variant="success" className="mt-4">

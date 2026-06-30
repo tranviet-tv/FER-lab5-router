@@ -16,11 +16,11 @@ const News = () => {
                 alt={news.title}
               />
               <Card.Body>
-                <Card.Title className="fs-6 fw-bold">{news.title}</Card.Title>
-                <Card.Text className="small text-muted">
+                <Card.Title>{news.title}</Card.Title>
+                <Card.Text>
                   {news.description}
                 </Card.Text>
-                <a href="#" className="small text-decoration-none">{news.title}</a>
+                <a href="#">{news.title}</a>
               </Card.Body>
             </Card>
           </Col>
